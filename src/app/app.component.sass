@@ -1,0 +1,30 @@
+@import "../../plugins/neat/neat"
+@import "sass/variables"
+
+.container
+  @include grid-container
+  font-family: 'Open Sans', sans-serif
+
+
+.sidebar
+  @include grid-column(3)
+  background: $primary-color
+  color: white
+  height: 100vh
+  margin-left: 0
+  padding: 2%
+
+.dashboard
+  @include grid-column(8)
+  padding: 2%
+
+  .module-box
+    @include grid-column(4)
+    margin-bottom: 4%
+
+    h3
+      color: $secondary-color
+
+    img
+      width: 100%
+      height: auto
