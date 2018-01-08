@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../plugins/neat/neat"
+@import "variables"
+
 body
   margin: 0
+
+.container
+  @include grid-container
+  font-family: 'Open Sans', sans-serif
+  position: relative
