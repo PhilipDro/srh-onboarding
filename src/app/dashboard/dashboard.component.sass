@@ -2,7 +2,7 @@
 @import "../../variables"
 
 html, body
-  font-family: Ubuntu
+  font-family: 'Ubuntu', sans-serif
 
 .test
   z-index: 999999 !important
@@ -26,7 +26,7 @@ html, body
 
 .sidebar
   @include grid-column(3)
-  background: $primary-color
+  background: linear-gradient (to right, $primary-color, $seconday-color)
   color: white
   height: 100vh
   margin-left: 0
@@ -45,6 +45,9 @@ html, body
 ul
   list-style: none
   padding: 0 0 0 1vw
+
+.checkmark
+  opacity: 0
 
 .dashboard
   @include grid-column(8)
