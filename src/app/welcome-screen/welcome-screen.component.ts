@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-screen',
@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-screen.component.sass']
 })
 export class WelcomeScreenComponent implements OnInit {
-  welcomeActive = true;
 
-  clickGo():void {
-    this.welcomeActive = false;
+  @Output() onClickGo = new EventEmitter<boolean>();
+  clickedGo = false;
+
+  clickGo(clicked: boolean) {
+    this.onClickGo.emit(clicked);
+    this.clickedGo = true;
   }
-
 
   constructor() { }
 
