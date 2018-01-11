@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-screen.component.sass']
 })
 export class WelcomeScreenComponent implements OnInit {
+  welcomeActive = true;
+
+  clickGo():void {
+    this.welcomeActive = false;
+  }
+
 
   constructor() { }
 

@@ -1,5 +1,5 @@
-<article>
+<article *ngIf="welcomeActive">
   <h1>Herzlich Willkommen</h1>
   <p>Der hilfreiche Begleiter während Ihres Aufenthaltes.</p>
-  <button>Los geht's</button>
+  <button (click)="clickGo()">Los geht's</button>
 </article>
