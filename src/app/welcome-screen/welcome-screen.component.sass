@@ -1,17 +1,55 @@
+@import "../../../plugins/neat/neat"
 @import "../../variables"
 
 article
   position: absolute
-  width: 40%
+  width: 60%
   left: 50%
-  top: 30%
+  top: 40%
   transform: translate(-50%, -50%)
-  background: grey
+  background: $light-grey
   padding: 2%
   z-index: 1100
+  font-size: $font-size-default * 1.2
+  text-align: center
+  background-image: url('../../assets/images/welcome-bg.jpg')
+  background-size: cover
+  border: 1px solid $grey
+  box-shadow: 0 12px 12px rgba(0,0,0,0.56), 0 6px 12px rgba(0,0,0,0.53)
+
+  h1
+    // font-weight: normal
+    font-size: $font-size-default * 1.6
+
+  .intro-text
+    margin-bottom: 1.5em
+    font-size: $font-size-default * 1.05
+
+  .info
+    @include grid-container
+    .column
+      @include grid-column(3)
+      text-align: center
+
+      strong
+        font-size: $font-size-default * 1.6
+
+  .button-section
+    text-align: center
+    margin: 1.4em 0
 
   button
-    float: right
+    font-size: $font-size-default
+
+  button.btn-primary
+    // float: right
     padding: 4%
     background: $secondary-color
+    border: 1px solid darken($secondary-color, 10%)
+
+  button.btn-secondary
+    // float: right
+    padding: 4%
+    background: $grey
     border: none
+    border: 1px solid darken($grey, 10%)

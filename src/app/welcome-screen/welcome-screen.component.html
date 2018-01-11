@@ -1,5 +1,24 @@
 <article *ngIf="!clickedGo">
-  <h1>Herzlich Willkommen</h1>
-  <p>Der hilfreiche Begleiter während Ihres Aufenthaltes.</p>
-  <button (click)="clickGo(true)">Los geht's</button>
+  <h1>Hallo Dieter Schultz!</h1>
+  <p class="intro-text">Erfahren Sie in nur <strong>2 Minuten</strong> spielerisch alles, was Sie während Ihres Aufenthaltes im SRH Waldklinikum wissen möchten.</p>
+
+  <section class="info">
+    <div class="column">
+      <p><strong>268</strong><br />Zimmer</p>
+    </div>
+    <div class="column">
+      <p><strong>98</strong><br />Ärzte</p>
+    </div>
+    <div class="column">
+      <p><strong>331</strong><br />Patienten</p>
+    </div>
+    <div class="column">
+      <p><strong>13</strong><br />Abteilungen</p>
+    </div>
+  </section>
+
+  <section class="button-section">
+    <button class="btn-secondary">Überspringen</button>
+    <button class="btn-primary" (click)="clickGo(true)">Tour starten!</button>
+  </section>
 </article>
