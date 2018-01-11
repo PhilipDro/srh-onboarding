@@ -7,15 +7,15 @@ html, body
 .test
   z-index: 999999 !important
 
-// .backdrop
-//   position: absolute
-//   top: 0
-//   bottom: 0
-//   left: 0
-//   right: 0
-//   background: black
-//   z-index: 10
-//   opacity: 0.4
+.overlay
+  // position: absolute
+  // top: 0
+  // bottom: 0
+  // left: 0
+  // right: 0
+  background: #E6E6E6
+  z-index: 10
+  // opacity: 0.6
 
 .blur
   filter: blur(3px)
@@ -31,6 +31,13 @@ html, body
   height: 100vh
   margin-left: 0
   padding: 2%
+
+  filter: blur(3px)
+  -o-filter: blur(3px)
+  -ms-filter: blur(3px)
+  -moz-filter: blur(3px)
+  -webkit-filter: blur(3px)
+
 
 .logo
   width: 5vw
@@ -61,11 +68,8 @@ ul
     img
       width: 100%
       height: auto
+      filter: brightness(60%)
 
-    .description-text
-      position: absolute
-      right: 2%
-      bottom: 3%
 
   .active-box
     filter: blur(0px)
@@ -73,3 +77,20 @@ ul
     -ms-filter: blur(0px)
     -moz-filter: blur(0px)
     -webkit-filter: blur(0px)
+
+    img
+      filter: brightness(100%)
+
+.active-sidebar
+  filter: blur(0px)
+  -o-filter: blur(0px)
+  -ms-filter: blur(0px)
+  -moz-filter: blur(0px)
+  -webkit-filter: blur(0px)
+
+
+.description-text
+  position: absolute
+  right: 2%
+  bottom: 3%
+  color: black

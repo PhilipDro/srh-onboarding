@@ -1,10 +1,10 @@
-<main class="container">
-  <div class="backdrop"></div>
-
+<main class="container" [ngClass]="{'overlay': backdrop}">
   <app-welcome-screen (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
-  <section class="sidebar" [ngClass]="{'active-box': blurElement==1 || blurElement == -1}">
-    <!-- [ngClass]="{'blur': backdrop}" -->
+  <section class="sidebar" [ngClass]="{'active-sidebar': blurElement==1 || blurElement == -1}">
+  <p *ngIf="blurElement == 1" class="description-text">
+    Hier sind alle möglichen Sachen für den heutigen Tag zu sehen.
+  </p>
       <img class="logo" src="../assets/images/SRH.svg.png"/>
 
     <h3>Hallo, <br> Martin Rieger.</h3>
@@ -112,8 +112,5 @@
         </p>
       </div>
     </article>
-
   </section>
-
-
 </main>
