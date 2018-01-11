@@ -1,8 +1,9 @@
 <main class="container">
+  <div class="backdrop"></div>
 
   <app-welcome-screen></app-welcome-screen>
 
-  <section class="sidebar">
+  <section class="sidebar" [ngClass]="{'blur': backdrop}">
     <p>Hallo, Martin Rieger.</p>
 
     <article>
@@ -21,7 +22,7 @@
       </ul>
     </article>
   </section>
-  <section class="dashboard">
+  <section class="dashboard" [ngClass]="{'blur': backdrop}">
     <h1>Ihre Module</h1>
     <article class="container">
       <div class="module-box">

@@ -1,6 +1,23 @@
 @import "../../../plugins/neat/neat"
 @import "../../variables"
 
+.backdrop
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: black
+  z-index: 1000
+  opacity: 0.4
+
+.blur
+  filter: blur(3px)
+  -o-filter: blur(3px)
+  -ms-filter: blur(3px)
+  -moz-filter: blur(3px)
+  -webkit-filter: blur(3px)
+
 .sidebar
   @include grid-column(3)
   background: $primary-color
@@ -12,6 +29,7 @@
 .dashboard
   @include grid-column(8)
   padding: 2%
+
 
   .module-box
     @include grid-column(4)
