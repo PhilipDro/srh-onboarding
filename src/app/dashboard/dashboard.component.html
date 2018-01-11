@@ -37,31 +37,65 @@
       <div class="module-box" [ngClass]="{'blur': blurElement!=2}">
         <img src="../assets/images/bild1.jpg" alt="bild1" />
         <h3>Waldklinikum</h3>
+
+        <!-- Beschreibungstext -->
+        <p *ngIf="blurElement == 2" class="description-text">
+          Dies ist ein Test Beschreibungstext. Hier kommen verschiedene
+          Informationen zu dem entsprechenden Modul rein.
+        </p>
       </div>
 
       <div class="module-box" [ngClass]="{'blur': blurElement!=3}">
         <img src="../assets/images/bild2.jpg" alt="bild2" />
         <h3>Unterhaltung</h3>
-      </div>
+
+        <!-- Beschreibungstext -->
+        <p *ngIf="blurElement == 3" class="description-text">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod.
+        </p>
+        </div>
 
       <div class="module-box" [ngClass]="{'blur': blurElement!=4}">
         <img src="../assets/images/bild3.jpg" alt="bild3" />
         <h3>Nachsorge</h3>
+
+        <!-- Beschreibungstext -->
+        <p *ngIf="blurElement == 4" class="description-text">
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        </p>
       </div>
 
       <div class="module-box" [ngClass]="{'blur': blurElement!=5}">
         <img src="../assets/images/bild1.jpg" alt="bild1" />
         <h3>Waldklinikum</h3>
+
+        <!-- Beschreibungstext -->
+        <p *ngIf="blurElement == 5" class="description-text">
+          Dies ist ein Test Beschreibungstext. Hier kommen verschiedene
+          Informationen zu dem entsprechenden Modul rein.
+        </p>
       </div>
 
       <div class="module-box" [ngClass]="{'blur': blurElement!=6}">
         <img src="../assets/images/bild2.jpg" alt="bild2" />
         <h3>Unterhaltung</h3>
+
+        <!-- Beschreibungstext -->
+        <p *ngIf="blurElement == 6" class="description-text">
+          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+        </p>
       </div>
 
       <div class="module-box" [ngClass]="{'blur': blurElement!=7}">
         <img src="../assets/images/bild3.jpg" alt="bild3" />
         <h3>Nachsorge</h3>
+
+        <!-- Beschreibungstext -->
+        <p *ngIf="blurElement == 7" class="description-text">
+          Dies ist ein Test Beschreibungstext. Hier kommen verschiedene
+          Informationen zu dem entsprechenden Modul rein.
+        </p>
       </div>
     </article>
 
