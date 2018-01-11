@@ -1,6 +1,9 @@
 @import "../../../plugins/neat/neat"
 @import "../../variables"
 
+html, body
+  font-family: Ubuntu
+
 .test
   z-index: 999999 !important
 
@@ -31,6 +34,10 @@
 
 .logo
   width: 5vw
+
+ul
+  list-style: none
+  padding: 0 0 0 1vw
 
 .dashboard
   @include grid-column(8)
