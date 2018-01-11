@@ -3,7 +3,7 @@
 
   <app-welcome-screen (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
-  <section class="sidebar" [ngClass]="{'blur': blurElement!=1}">
+  <section class="sidebar" [ngClass]="{'active-box': blurElement==1 || blurElement == -1}">
     <!-- [ngClass]="{'blur': backdrop}" -->
       <img class="logo" src="../assets/images/SRH.svg.png"/>
 
@@ -34,7 +34,7 @@
   <section class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
     <article class="container">
-      <div class="module-box" [ngClass]="{'blur': blurElement!=2}">
+      <div class="module-box" [ngClass]="{'active-box': blurElement==2 || blurElement == -1}">
         <img src="../assets/images/bild1.jpg" alt="bild1" />
         <h3>Waldklinikum</h3>
 
@@ -45,7 +45,7 @@
         </p>
       </div>
 
-      <div class="module-box" [ngClass]="{'blur': blurElement!=3}">
+      <div class="module-box" [ngClass]="{'active-box': blurElement==3 || blurElement == -1}">
         <img src="../assets/images/bild2.jpg" alt="bild2" />
         <h3>Unterhaltung</h3>
 
@@ -56,7 +56,7 @@
         </p>
         </div>
 
-      <div class="module-box" [ngClass]="{'blur': blurElement!=4}">
+      <div class="module-box" [ngClass]="{'active-box': blurElement==4 || blurElement == -1}">
         <img src="../assets/images/bild3.jpg" alt="bild3" />
         <h3>Nachsorge</h3>
 
@@ -66,7 +66,7 @@
         </p>
       </div>
 
-      <div class="module-box" [ngClass]="{'blur': blurElement!=5}">
+      <div class="module-box" [ngClass]="{'active-box': blurElement==5 || blurElement == -1}">
         <img src="../assets/images/bild1.jpg" alt="bild1" />
         <h3>Waldklinikum</h3>
 
@@ -77,7 +77,7 @@
         </p>
       </div>
 
-      <div class="module-box" [ngClass]="{'blur': blurElement!=6}">
+      <div class="module-box" [ngClass]="{'active-box': blurElement==6 || blurElement == -1}">
         <img src="../assets/images/bild2.jpg" alt="bild2" />
         <h3>Unterhaltung</h3>
 
@@ -87,7 +87,7 @@
         </p>
       </div>
 
-      <div class="module-box" [ngClass]="{'blur': blurElement!=7}">
+      <div class="module-box" [ngClass]="{'active-box': blurElement==7 || blurElement == -1}">
         <img src="../assets/images/bild3.jpg" alt="bild3" />
         <h3>Nachsorge</h3>
 
