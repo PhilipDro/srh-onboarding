@@ -1,5 +1,5 @@
 <main class="container" [ngClass]="{'overlay': backdrop}">
-  <app-welcome-screen (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
+  <app-welcome-screen (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
   <section class="sidebar" [ngClass]="{'active-sidebar': blurElement==1 || blurElement == -1}">
   <p *ngIf="blurElement == 1" class="description-text">

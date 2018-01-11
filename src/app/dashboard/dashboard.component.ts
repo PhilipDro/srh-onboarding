@@ -19,12 +19,18 @@ export class DashboardComponent implements OnInit {
     this.containerListener = this.tapAnywhere.bind(this)
     this.elementRef.nativeElement.querySelector('main.container')
     .addEventListener('click', this.containerListener);
-
   }
 
+  removeBackdrop() {
+    this.backdrop = false;
+    this.blurElement = -1;
+    this.elementRef.nativeElement.querySelector('main.container')
+    .removeEventListener('click', this.containerListener);
+  }
   // when user taps anywhere after starting tour
   tapAnywhere() {
     this.blurElement ++;
+    // when every element was shown
     if(this.blurElement == 8) {
       this.backdrop = false;
       this.blurElement = -1;

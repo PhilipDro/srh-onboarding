@@ -1,4 +1,4 @@
-<article *ngIf="!clickedGo">
+<article *ngIf="!clickedSkip && !clickedGo">
   <h1>Hallo Dieter Schultz!</h1>
   <p class="intro-text">Erfahren Sie in nur <strong>2 Minuten</strong> spielerisch alles, was Sie während Ihres Aufenthaltes im SRH Waldklinikum wissen möchten.</p>
 
@@ -18,7 +18,7 @@
   </section>
 
   <section class="button-section">
-    <button class="btn-secondary">Überspringen</button>
+    <button class="btn-secondary" (click)="clickSkip(true)">Überspringen</button>
     <button class="btn-primary" (click)="clickGo(true)">Tour starten!</button>
   </section>
 </article>
