@@ -7,10 +7,10 @@
   </p>
       <img class="logo" src="../assets/images/SRH.svg.png"/>
 
-    <h3>Hallo, <br> Martin Rieger.</h3>
+    <h3 class="begruessung">Hallo, <br> Martin Rieger.</h3>
 
-    <article>
-      <strong>Tagesplan:</strong>
+    <article class="tagesplanbox">
+      <img class="daily" src="../assets/icons/daily.svg" alt="daily"/>:
       <ul>
         <li>07:00 - Frühstück</li>
         <li>
@@ -35,7 +35,7 @@
     </article>
 
     <article>
-      <strong>Medikamente:</strong>
+      <img class="medicine" src="../assets/icons/medicine.svg" alt="medicine"/>:
       <ul>
         <li>3x Ibuprofen täglich</li>
         <li>2x Novaminsulfon 500mg</li>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="module-box" [ngClass]="{'active-box': blurElement==3 || blurElement == -1}">
-        <img src="../assets/images/unterhaltung.jpg" alt="unterhaltung" />
+        <img src="../assets/images/unterhaltung.jpeg" alt="unterhaltung" />
         <h3>Unterhaltung</h3>
 
         <!-- Beschreibungstext -->
@@ -68,8 +68,8 @@
         </div>
 
       <div class="module-box" [ngClass]="{'active-box': blurElement==4 || blurElement == -1}">
-        <img src="../assets/images/bild3.jpg" alt="bild3" />
-        <h3>Nachsorge</h3>
+        <img src="../assets/images/kinderstation.jpeg" alt="Kinderstation" />
+        <h3>Kinderstation</h3>
 
         <!-- Beschreibungstext -->
         <p *ngIf="blurElement == 4" class="description-text">
@@ -78,8 +78,8 @@
       </div>
 
       <div class="module-box" [ngClass]="{'active-box': blurElement==5 || blurElement == -1}">
-        <img src="../assets/images/bild1.jpg" alt="bild1" />
-        <h3>Waldklinikum</h3>
+        <img src="../assets/images/nachsorge.jpeg" alt="Nachsorge" />
+        <h3>Nachsorge</h3>
 
         <!-- Beschreibungstext -->
         <p *ngIf="blurElement == 5" class="description-text">
@@ -89,8 +89,8 @@
       </div>
 
       <div class="module-box" [ngClass]="{'active-box': blurElement==6 || blurElement == -1}">
-        <img src="../assets/images/schach.jpg" alt="unterhaltung" />
-        <h3>Unterhaltung</h3>
+        <img src="../assets/images/nach.jpeg" alt="unterhaltung" />
+        <h3>Nachsorge</h3>
 
         <!-- Beschreibungstext -->
         <p *ngIf="blurElement == 6" class="description-text">
@@ -100,7 +100,7 @@
 
       <div class="module-box" [ngClass]="{'active-box': blurElement==7 || blurElement == -1}">
         <img src="../assets/images/bild3.jpg" alt="bild3" />
-        <h3>Nachsorge</h3>
+        <h3>Mutterstation</h3>
 
         <!-- Beschreibungstext -->
         <p *ngIf="blurElement == 7" class="description-text">

@@ -14,7 +14,7 @@
 
 .sidebar
   @include grid-column(3)
-  background: $primary-color
+  background: linear-gradient( #2287C9, $primary-color,  #2287C9)
   color: white
   height: 100vh
   margin-left: 0
@@ -26,16 +26,28 @@
   -moz-filter: blur(3px)
   -webkit-filter: blur(3px)
 
-
 .logo
   width: 5vw
+  margin-bottom: 2vh
+
+.begruessung
+  margin-bottom: 4vh
+
+.tagesplanbox
+  margin-bottom: 4vh
+
+.daily
+  width: 3.5vw
 
 ul
   list-style: none
-  padding: 0 0 0 1vw
+  padding: 0 0 0 0
 
 .checkmark
   opacity: 0
+
+.medicine
+  width: 4vw
 
 .dashboard
   @include grid-column(8)
@@ -54,7 +66,8 @@ ul
     -webkit-filter: blur(3px)
 
     h3
-      color: $secondary-color
+      color: #34553C
+      margin: .5vh 0 2vh 0
 
     img
       width: 100%
