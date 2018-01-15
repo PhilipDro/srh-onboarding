@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
+import { CustomizationComponent } from './customization/customization.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    WelcomeScreenComponent
+    WelcomeScreenComponent,
+    CustomizationComponent
   ],
   imports: [
     BrowserModule,
