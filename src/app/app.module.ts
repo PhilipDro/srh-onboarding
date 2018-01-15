@@ -7,20 +7,26 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 import { CustomizationComponent } from './customization/customization.component';
+import { SrhTourComponent } from './srh-tour/srh-tour.component';
+
+import { ModulesService } from './modules.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     WelcomeScreenComponent,
-    CustomizationComponent
+    CustomizationComponent,
+    SrhTourComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ModulesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
