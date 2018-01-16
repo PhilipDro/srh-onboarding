@@ -5,7 +5,7 @@
   <p *ngIf="blurElement == -1" class="description-text">
     Hier sind alle möglichen Sachen für den heutigen Tag zu sehen.
   </p>
-      <img class="logo" src="../assets/images/SRH_weiß.png"/>
+    <img class="logo" src="../assets/images/SRH_weiß.png" (click)="srhTourActive = !srhTourActive"/>
 
     <h3 class="begruessung">Hallo, <br> Martin Rieger.</h3>
 
@@ -42,13 +42,14 @@
       </ul>
     </article>
   </section>
-  <section class="dashboard">
+  <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
+  <section *ngIf="!srhTourActive" class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
     <article class="container">
       <!-- Test mock modules -->
       <ul>
         <li *ngFor="let module of modules; let i = index">
-          <div class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
+          <div (click)="srhTourActive = !srhTourActive" class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
             <img src="{{module.thumbnail}}" alt="nachsorge" />
             <h3>{{module.name}}</h3>
             <p *ngIf="blurElement == i" class="description-text">
