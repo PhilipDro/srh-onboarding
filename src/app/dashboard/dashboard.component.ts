@@ -12,7 +12,8 @@ export class DashboardComponent implements OnInit {
 
   // tells wether or not the background is blacked out
   backdrop = true;
-  blurElement = 0;
+  //auto increments with every tap anywhere to activate/highlight certain module
+  blurElement = -2;
 
   // new function reference is created after bind() --> need to save to variable
   containerListener;
@@ -39,7 +40,7 @@ export class DashboardComponent implements OnInit {
 
   removeBackdrop() {
     this.backdrop = false;
-    this.blurElement = -1;
+    this.blurElement = -3;
     this.elementRef.nativeElement.querySelector('main.container')
     .removeEventListener('click', this.containerListener);
   }
@@ -48,9 +49,9 @@ export class DashboardComponent implements OnInit {
   tapAnywhere() {
     this.blurElement ++;
     // when every element was shown
-    if(this.blurElement == 8) {
+    if(this.blurElement == 6) {
       this.backdrop = false;
-      this.blurElement = -1;
+      this.blurElement = -3;
       this.elementRef.nativeElement.querySelector('main.container')
       .removeEventListener('click', this.containerListener);
     }

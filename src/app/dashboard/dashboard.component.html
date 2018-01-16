@@ -1,8 +1,8 @@
 <main class="container" [ngClass]="{'overlay': backdrop}">
   <app-welcome-screen (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
-  <section class="sidebar" [ngClass]="{'active-sidebar': blurElement==1 || blurElement == -1}">
-  <p *ngIf="blurElement == 1" class="description-text">
+  <section class="sidebar" [ngClass]="{'active-sidebar': blurElement==-1 || blurElement == -3}">
+  <p *ngIf="blurElement == -1" class="description-text">
     Hier sind alle möglichen Sachen für den heutigen Tag zu sehen.
   </p>
       <img class="logo" src="../assets/images/SRH_weiß.png"/>
@@ -45,83 +45,18 @@
   <section class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
     <article class="container">
-      <div class="module-box" [ngClass]="{'active-box': blurElement==2 || blurElement == -1}">
-        <img src="../assets/images/bild1.jpg" alt="bild1" />
-        <h3>Waldklinikum</h3>
-
-        <!-- Beschreibungstext -->
-        <p *ngIf="blurElement == 2" class="description-text">
-          Dies ist ein Test Beschreibungstext. Hier kommen verschiedene
-          Informationen zu dem entsprechenden Modul rein.
-        </p>
-      </div>
-
-      <div class="module-box" [ngClass]="{'active-box': blurElement==3 || blurElement == -1}">
-        <img src="../assets/images/unterhaltung.jpeg" alt="unterhaltung" />
-        <h3>Unterhaltung</h3>
-
-        <!-- Beschreibungstext -->
-        <p *ngIf="blurElement == 3" class="description-text">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-          sed diam nonumy eirmod.
-        </p>
-        </div>
-
-      <div class="module-box" [ngClass]="{'active-box': blurElement==4 || blurElement == -1}">
-        <img src="../assets/images/kinderstation.jpeg" alt="Kinderstation" />
-        <h3>Kinderstation</h3>
-
-        <!-- Beschreibungstext -->
-        <p *ngIf="blurElement == 4" class="description-text">
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-        </p>
-      </div>
-
-      <div class="module-box" [ngClass]="{'active-box': blurElement==5 || blurElement == -1}">
-        <img src="../assets/images/nachsorge.jpeg" alt="Nachsorge" />
-        <h3>Nachsorge</h3>
-
-        <!-- Beschreibungstext -->
-        <p *ngIf="blurElement == 5" class="description-text">
-          Dies ist ein Test Beschreibungstext. Hier kommen verschiedene
-          Informationen zu dem entsprechenden Modul rein.
-        </p>
-      </div>
-
-      <div class="module-box" [ngClass]="{'active-box': blurElement==6 || blurElement == -1}">
-        <img src="../assets/images/nach.jpeg" alt="unterhaltung" />
-        <h3>Nachsorge</h3>
-
-        <!-- Beschreibungstext -->
-        <p *ngIf="blurElement == 6" class="description-text">
-          tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-        </p>
-      </div>
-
-      <div class="module-box" [ngClass]="{'active-box': blurElement==7 || blurElement == -1}">
-        <img src="../assets/images/bild3.jpg" alt="bild3" />
-        <h3>Mutterstation</h3>
-
-        <!-- Beschreibungstext -->
-        <p *ngIf="blurElement == 7" class="description-text">
-          Dies ist ein Test Beschreibungstext. Hier kommen verschiedene
-          Informationen zu dem entsprechenden Modul rein.
-        </p>
-      </div>
+      <!-- Test mock modules -->
+      <ul>
+        <li *ngFor="let module of modules; let i = index">
+          <div class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
+            <img src="{{module.thumbnail}}" alt="nachsorge" />
+            <h3>{{module.name}}</h3>
+            <p *ngIf="blurElement == i" class="description-text">
+              {{module.description}}
+            </p>
+          </div>
+        </li>
+      </ul>
     </article>
-
-
-    <!-- Test mock modules -->
-    <ul>
-      <li *ngFor="let module of modules">
-        <div class="module-box">
-          <img src="{{module.thumbnail}}" alt="nachsorge" />
-          <h3>{{module.name}}</h3>
-          <p class="description-text">
-            {{module.description}}
-          </p>
-        </div>
-      </li>
-    </ul>
   </section>
 </main>
