@@ -114,7 +114,13 @@
     <!-- Test mock modules -->
     <ul>
       <li *ngFor="let module of modules">
-        {{module.name}}
+        <div class="module-box">
+          <img src="{{module.thumbnail}}" alt="nachsorge" />
+          <h3>{{module.name}}</h3>
+          <p class="description-text">
+            {{module.description}}
+          </p>
+        </div>
       </li>
     </ul>
   </section>
