@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   modules: Module[];
 
   // tells wether srh tour was clicked or not
-  srhTourActive = false;
+  srhTourActive = true;
   // tells wether or not the background is blacked out
   backdrop = true;
   //auto increments with every tap anywhere to activate/highlight certain module
@@ -50,12 +50,16 @@ export class DashboardComponent implements OnInit {
   // when user taps anywhere after starting tour
   tapAnywhere() {
     this.blurElement ++;
+    // alert(this.blurElement);
     // when every element was shown
     if(this.blurElement == 6) {
       this.backdrop = false;
       this.blurElement = -3;
       this.elementRef.nativeElement.querySelector('main.container')
       .removeEventListener('click', this.containerListener);
+      // // add event listener on module to click
+      // this.elementRef.nativeElement.querySelector('.module-box')
+      // .addEventListener('click', this.toggleSrhTour());
     }
   }
 

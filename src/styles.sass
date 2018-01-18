@@ -11,3 +11,24 @@ body
 .container
   @include grid-container
   font-family: 'Open Sans', sans-serif
+
+.special-font-1
+  color: $primary-color
+.special-font-2
+  color: $secondary-color
+
+button
+  font-size: $font-size-default
+
+button.btn-primary
+  // float: right
+  padding: 3%
+  background: $secondary-color
+  border: 1px solid darken($secondary-color, 10%)
+
+button.btn-secondary
+  // float: right
+  padding: 3%
+  background: $grey
+  border: none
+  border: 1px solid darken($grey, 10%)

@@ -42,6 +42,7 @@
       </ul>
     </article>
   </section>
+  <span (click)="srhTourActive = false">Home</span>
   <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
   <section *ngIf="!srhTourActive" class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
@@ -49,8 +50,8 @@
       <!-- Test mock modules -->
       <ul>
         <li *ngFor="let module of modules; let i = index">
-          <div (click)="srhTourActive = !srhTourActive" class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
-            <img src="{{module.thumbnail}}" alt="nachsorge" />
+          <div (click)="srhTourActive = true" class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
+            <img src="{{module.thumbnail}}" />
             <h3>{{module.name}}</h3>
             <p *ngIf="blurElement == i" class="description-text">
               {{module.description}}

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./srh-tour.component.sass']
 })
 export class SrhTourComponent implements OnInit {
+  srhTourStarted = true;
 
   constructor() { }
 
