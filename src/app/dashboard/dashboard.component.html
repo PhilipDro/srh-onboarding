@@ -12,21 +12,21 @@
     <article class="tagesplanbox">
       <img class="daily" src="../assets/icons/daily.svg" alt="daily"/>:
       <ul>
-        <li>07:00 - Frühstück</li>
+        <li><span class="time">07:00</span> Frühstück</li>
         <li>
           <input type="checkbox" name="medicine" id="checked">
               <label class="strikethrough">1x Ibuprofen</label>
         </li>
-        <li>09:00 - Visite</li>
-        <li>10:00 - Termin Dr. Müller</li>
-        <li>11:00 - Anfang der Besuchzeit</li>
-        <li>13:00 - Mittagessen</li>
+        <li><span class="time">09:00</span> Visite</li>
+        <li><span class="time">10:00</span> Termin Dr. Müller</li>
+        <li><span class="time">11:00</span> Anfang der Besuchzeit</li>
+        <li><span class="time">13:00</span> Mittagessen</li>
         <li>
           <input type="checkbox" name="medicine" id="checked">
               <label class="strikethrough">1x Ibuprofen</label>
         </li>
-        <li>15:30 - Fußtherapie Dr. Linke</li>
-        <li>18:00 - Ende der Besuchzeit</li>
+        <li><span class="time">15:30</span> Fußtherapie Dr. Linke</li>
+        <li><span class="time">18:00</span> Ende der Besuchzeit</li>
         <li>
           <input type="checkbox" name="medicine" id="checked">
               <label class="strikethrough">1x Ibuprofen</label>
@@ -34,15 +34,15 @@
       </ul>
     </article>
 
-    <article>
+    <!--<article>
       <img class="medicine" src="../assets/icons/medicine.svg" alt="medicine"/>:
       <ul>
         <li>3x Ibuprofen täglich</li>
         <li>2x Novaminsulfon 500mg</li>
       </ul>
-    </article>
+    </article>!-->
   </section>
-  <span (click)="srhTourActive = false">Home</span>
+  <span class="home"(click)="srhTourActive = false">Home</span>
   <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
   <section *ngIf="!srhTourActive" class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
