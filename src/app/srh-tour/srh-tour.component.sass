@@ -4,3 +4,25 @@
 .srh-tour
   @include grid-column(8)
   padding: 2%
+
+.srh-segment
+  @include grid-column(6)
+
+.srh-box
+  background: $bg-color-highlight
+  border: 1px solid darken($light-grey, 5%)
+  padding: 2%
+
+  .right-col
+    @include grid-column(6)
+    margin-left: 10px
+
+  img
+    @include grid-column(6)
+    max-width: 100%
+    height: auto
+    display: inline
+    margin-left: 0
+
+.special
+  background: $primary-color

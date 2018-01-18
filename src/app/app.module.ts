@@ -10,6 +10,7 @@ import { CustomizationComponent } from './customization/customization.component'
 import { SrhTourComponent } from './srh-tour/srh-tour.component';
 
 import { ModulesService } from './modules.service';
+import { SrhTourGameComponent } from './srh-tour-game/srh-tour-game.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ModulesService } from './modules.service';
     DashboardComponent,
     WelcomeScreenComponent,
     CustomizationComponent,
-    SrhTourComponent
+    SrhTourComponent,
+    SrhTourGameComponent
   ],
   imports: [
     BrowserModule,
