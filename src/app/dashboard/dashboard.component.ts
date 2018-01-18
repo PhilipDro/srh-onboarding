@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   modules: Module[];
 
   // tells wether srh tour was clicked or not
-  srhTourActive = true;
+  srhTourActive = false;
   // tells wether or not the background is blacked out
   backdrop = true;
   //auto increments with every tap anywhere to activate/highlight certain module
