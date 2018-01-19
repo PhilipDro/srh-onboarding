@@ -42,7 +42,7 @@
       </ul>
     </article>!-->
   </section>
-  <span class="home"(click)="srhTourActive = false">Home</span>
+  <span class="home"(click)="srhTourActive = false"><img src="../assets/icons/home-button.svg" alt="home-button"/></span>
   <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
   <section *ngIf="!srhTourActive" class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
