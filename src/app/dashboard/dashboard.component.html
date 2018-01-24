@@ -10,12 +10,12 @@
     <h3 class="begruessung">Hallo, <br> Martin Rieger.</h3>
 
     <article class="tagesplanbox">
-      <img class="daily" src="../assets/icons/daily.svg" alt="daily"/>
+      <img class="daily" src="../assets/icons/calendar.svg" alt="daily"/><p class="tagesplan">Tagesplan</p>
       <ul>
         <li><span class="time">07:00</span> Frühstück</li>
         <li>
-          <span class="time"><input type="checkbox" name="medicine" id="checked">
-              <label class="strikethrough">1x Ibuprofen</label></span>
+          <span class="time"><label class="strikethrough"><input type="checkbox" name="medicine" id="checked">
+              1x Ibuprofen</label></span>
         </li>
         <li><span class="time">09:00</span> Visite</li>
         <li><span class="time">10:00</span> Termin Dr. Müller</li>
@@ -42,7 +42,7 @@
       </ul>
     </article>!-->
   </section>
-  <span class="home"(click)="srhTourActive = false"><img src="../assets/icons/home-button.svg" alt="home-button"/></span>
+  <span class="home"(click)="srhTourActive = false"><img src="../assets/icons/home-black-building-symbol.svg" alt="home-button"/></span>
   <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
   <section *ngIf="!srhTourActive" class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
