@@ -2,33 +2,60 @@
   <h1>Ihr Aufenthalt im SRH Waldklinikum</h1>
 
   <div class="srh-segment">
-    <h2>Ihr Standort</h2>
+    <h2>Standort</h2>
     <article class="srh-box">
       <img src="../assets/images/doctor.png" alt="Doktor" />
       <h3>Dr. Stefan Metzstein</h3>
       <p>Doktor für Kardiologie und Neurologie</p>
-      <button>Erfahre mehr</button>
+      <button class="btn-primary">Erfahre mehr</button>
     </article>
   </div>
   <div class="srh-segment">
-    <h2>Ihr Arzt</h2>
+    <h2>Arzt</h2>
     <article class="srh-box">
       <img src="../assets/images/doctor.png" alt="Doktor" />
       <div class="right-col">
         <h3>Dr. Stefan Metzstein</h3>
         <p class="sub-h3">Doktor für Kardiologie und Neurologie</p>
       </div>
-      <button>Erfahre mehr</button>
+      <button class="btn-primary">Erfahre mehr</button>
     </article>
   </div>
-  <div class="srh-segment">
+  <div class="srh-segment-full">
     <h2>Entdecken Sie das Klinikum!</h2>
     <article class="srh-box special">
       <p>
         Werden Sie daher selbst aktiv und lernen unser Waldklinikum hautnah kennen.
         Zum Abschluss gibt es ein gratis Getränk aus von der Cafeteria!
       </p>
-      <button (click)="srhTourStarted = true">Tour starten</button>
+      <button class="btn-primary" (click)="srhTourStarted = true">Tour starten</button>
+    </article>
+  </div>
+
+  <div class="srh-segment-small">
+    <h2>Essen</h2>
+    <article class="srh-box food">
+      <button class="btn-primary">Erfahre mehr</button>
+    </article>
+  </div>
+  <div class="srh-segment-small">
+    <h2>Info</h2>
+    <article class="srh-box info">
+      <div>
+        <i class="fa fa-wifi fa-3x" aria-hidden="true"></i> Internet
+      </div>
+      <div>
+        <i class="fa fa-phone fa-3x" aria-hidden="true"></i> Telefon
+      </div>
+      <div>
+        <i class="fa fa-television fa-3x" aria-hidden="true"></i> Fernsehen
+      </div>
+    </article>
+  </div>
+  <div class="srh-segment-small">
+    <h2>Kultur</h2>
+    <article class="srh-box culture">
+      <button class="btn-primary">Erfahre mehr</button>
     </article>
   </div>
 </section>

@@ -2,16 +2,30 @@
 @import "../../variables"
 
 .srh-tour
-  @include grid-column(8)
+  @include grid-column(8.7)
+  margin-left: 0
   padding: 2%
+  @include grid-container
 
 .srh-segment
   @include grid-column(6)
+  margin-left: 0
+  margin-right: 20px
+
+.srh-segment-small
+  @include grid-column(4)
+  margin-left: 0
+  margin-right: 20px
+
+.srh-segment-full
+  @include grid-column(12)
+  margin-left: 0
 
 .srh-box
   background: $bg-color-highlight
   border: 1px solid darken($light-grey, 5%)
   padding: 2%
+  position: relative
 
   .right-col
     @include grid-column(6)
@@ -24,22 +38,38 @@
     display: inline
     margin-left: 0
 
+.culture
+  background-image: url("../assets/images/srh-tour-culture.jpg")
+  background-size: cover
+  background-position: center
+  min-height: 250px
+
+  button
+    position: absolute
+    bottom: 1em
+    left: 50%
+    transform: translateX(-50%)
+
+.food
+  background-image: url("../assets/images/srh-tour-food.jpg")
+  background-size: cover
+  background-position: center
+  min-height: 250px
+
+  button
+    position: absolute
+    bottom: 1em
+    left: 50%
+    transform: translateX(-50%)
+
+.info
+  // max-height: 250px
+  padding: 1em
+
+  div
+    padding: 1em 0
+
+
 .special
   background: $primary-color
   color: white
-
-button
-  font-size: $font-size-default
-
-button.btn-primary
-  // float: right
-  padding: 4%
-  background: $secondary-color
-  border: 1px solid darken($secondary-color, 10%)
-
-button.btn-secondary
-  // float: right
-  padding: 4%
-  background: $grey
-  border: none
-  border: 1px solid darken($grey, 10%)

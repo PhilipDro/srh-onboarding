@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
 
   toggleSrhTour() {
     this.srhTourActive = true;
-    alert(this.srhTourActive);
+    // alert(this.srhTourActive);
   }
 
 }
