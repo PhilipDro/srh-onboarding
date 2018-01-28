@@ -47,8 +47,8 @@ export class DashboardComponent implements OnInit {
     .removeEventListener('click', this.containerListener);
 
     // add event listener on module to click
-    this.elementRef.nativeElement.querySelector('.module-box')
-    .addEventListener('click', this.toggleSrhTour());
+    // this.elementRef.nativeElement.querySelector('.module-box')
+    // .addEventListener('click', this.toggleSrhTour());
   }
 
   // when user taps anywhere after starting tour
@@ -68,8 +68,12 @@ export class DashboardComponent implements OnInit {
   }
 
   toggleSrhTour() {
-    this.srhTourActive = true;
-    // alert(this.srhTourActive);
+    if(this.blurElement > -3) {
+      this.srhTourActive = false;
+    }
+    else {
+      this.srhTourActive = true;
+    }
   }
 
 }
