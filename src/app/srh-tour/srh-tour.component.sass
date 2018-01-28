@@ -27,16 +27,30 @@
   padding: 2%
   position: relative
 
+.srh-box-medium
+  background: $bg-color-highlight
+  border: 1px solid darken($light-grey, 5%)
+  padding: 2%
+  position: relative
+  height: 180px
+
   .right-col
-    @include grid-column(6)
+    // @include grid-column(6)
     margin-left: 10px
 
   img
     @include grid-column(6)
-    max-width: 100%
+    max-width: 50%
     height: auto
     display: inline
     margin-left: 0
+
+.map
+  background-image: url("../assets/images/srh-tour-map.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  height: 180px
 
 .culture
   background-image: url("../assets/images/srh-tour-culture.jpg")
