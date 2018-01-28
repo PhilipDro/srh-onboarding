@@ -1,0 +1,74 @@
+@import "../../../plugins/neat/neat"
+@import "../../variables"
+
+// .blur
+//   filter: blur(3px)
+//   -o-filter: blur(3px)
+//   -ms-filter: blur(3px)
+//   -moz-filter: blur(3px)
+//   -webkit-filter: blur(3px)
+
+.sidebar
+  @include grid-column(3)
+  background: linear-gradient( #2287C9, $primary-color,  #2287C9)
+  color: white
+  height: 100vh
+  margin-left: 0
+  padding: 2%
+
+  filter: blur(3px)
+  -o-filter: blur(3px)
+  -ms-filter: blur(3px)
+  -moz-filter: blur(3px)
+  -webkit-filter: blur(3px)
+
+.logo
+  width: 10vw
+  margin-bottom: 2vh
+
+.begruessung
+  margin-bottom: 3vh
+
+.tagesplanbox
+  margin-bottom: 4vh
+
+.daily
+  width: 3.5vw
+
+ul
+  list-style: none
+  padding: 0 0 0 0
+
+.tagesplanbox > ul > li
+  padding-bottom: 3vh
+  font-size: 15px
+
+.tagesplanbox > .tagesplan, .daily
+  display: inline-block
+
+.tagesplan
+  margin-left: 4%
+
+.time
+  /*background-color: mediumseagreen
+  padding: 2.5%
+  margin-right: 1%
+  border-radius: 10%
+  border: 1.5px solid mediumseagreen
+
+.checkmark
+  opacity: 0
+
+[type=checkbox]:checked + span
+  text-decoration: line-through
+  color: #a8a8a8
+
+.medicine
+  width: 4vw
+
+.active-sidebar
+  filter: blur(0px)
+  -o-filter: blur(0px)
+  -ms-filter: blur(0px)
+  -moz-filter: blur(0px)
+  -webkit-filter: blur(0px)

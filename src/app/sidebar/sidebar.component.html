@@ -1,0 +1,30 @@
+<section class="sidebar" [ngClass]="{'active-sidebar': blurElement==-1 || blurElement == -3}">
+  <img class="logo" src="../assets/images/SRH_weiß.png" (click)="srhTourActive = !srhTourActive"/>
+
+  <h3 class="begruessung">Hallo, <br> Martin Rieger.</h3>
+
+  <article class="tagesplanbox">
+    <img class="daily" src="../assets/icons/calendar-white.svg" alt="daily"/><p class="tagesplan">Tagesplan</p>
+    <ul>
+      <li><span class="time">07:00</span> Frühstück</li>
+      <li>
+        <label class="strikethrough"><span class="time"><input type="checkbox" name="medicine" id="checked">
+            <span>1x Ibuprofen</span></span></label>
+      </li>
+      <li><span class="time">09:00</span> Visite</li>
+      <li><span class="time">10:00</span> Termin Dr. Müller</li>
+      <li><span class="time">11:00</span> Anfang der Besuchzeit</li>
+      <li><span class="time">13:00</span> Mittagessen</li>
+      <li>
+        <label class="strikethrough"><span class="time"><input type="checkbox" name="medicine" id="checked">
+            <span>1x Ibuprofen</span></span></label>
+      </li>
+      <li><span class="time">15:30</span> Fußtherapie Dr. Linke</li>
+      <li><span class="time">18:00</span> Ende der Besuchzeit</li>
+      <li>
+        <label class="strikethrough"><span class="time"><input type="checkbox" name="medicine" id="checked">
+            <span>1x Ibuprofen</span></span></label>
+      </li>
+    </ul>
+  </article>
+</section>

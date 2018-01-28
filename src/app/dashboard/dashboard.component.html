@@ -1,47 +1,8 @@
 <main class="container" [ngClass]="{'overlay': backdrop}">
   <app-welcome-screen (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
-  <section class="sidebar" [ngClass]="{'active-sidebar': blurElement==-1 || blurElement == -3}">
-  <p *ngIf="blurElement == -1" class="description-text">
-    Hier sind alle möglichen Sachen für den heutigen Tag zu sehen.
-  </p>
-    <img class="logo" src="../assets/images/SRH_weiß.png" (click)="srhTourActive = !srhTourActive"/>
+  <app-sidebar [blurElement]="blurElement"></app-sidebar>
 
-    <h3 class="begruessung">Hallo, <br> Martin Rieger.</h3>
-
-    <article class="tagesplanbox">
-      <img class="daily" src="../assets/icons/calendar-white.svg" alt="daily"/><p class="tagesplan">Tagesplan</p>
-      <ul>
-        <li><span class="time">07:00</span> Frühstück</li>
-        <li>
-          <label class="strikethrough"><span class="time"><input type="checkbox" name="medicine" id="checked">
-              <span>1x Ibuprofen</span></span></label>
-        </li>
-        <li><span class="time">09:00</span> Visite</li>
-        <li><span class="time">10:00</span> Termin Dr. Müller</li>
-        <li><span class="time">11:00</span> Anfang der Besuchzeit</li>
-        <li><span class="time">13:00</span> Mittagessen</li>
-        <li>
-          <label class="strikethrough"><span class="time"><input type="checkbox" name="medicine" id="checked">
-              <span>1x Ibuprofen</span></span></label>
-        </li>
-        <li><span class="time">15:30</span> Fußtherapie Dr. Linke</li>
-        <li><span class="time">18:00</span> Ende der Besuchzeit</li>
-        <li>
-          <label class="strikethrough"><span class="time"><input type="checkbox" name="medicine" id="checked">
-              <span>1x Ibuprofen</span></span></label>
-        </li>
-      </ul>
-    </article>
-
-    <!--<article>
-      <img class="medicine" src="../assets/icons/medicine.svg" alt="medicine"/>:
-      <ul>
-        <li>3x Ibuprofen täglich</li>
-        <li>2x Novaminsulfon 500mg</li>
-      </ul>
-    </article>!-->
-  </section>
   <span class="home"(click)="srhTourActive = false"><img src="../assets/icons/home-black-building-symbol.svg" alt="home-button"/></span>
   <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
   <section *ngIf="!srhTourActive" class="dashboard">
@@ -59,6 +20,12 @@
           </div>
         </li>
       </ul>
+
+      <!-- description text for sidebar ! -->
+      <p *ngIf="blurElement == -1" class="description-text">
+        Hier sind alle möglichen Sachen für den heutigen Tag zu sehen.
+      </p>
+
     </article>
   </section>
 </main>

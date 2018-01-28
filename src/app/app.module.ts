@@ -11,6 +11,7 @@ import { SrhTourComponent } from './srh-tour/srh-tour.component';
 
 import { ModulesService } from './modules.service';
 import { SrhTourGameComponent } from './srh-tour-game/srh-tour-game.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SrhTourGameComponent } from './srh-tour-game/srh-tour-game.component';
     WelcomeScreenComponent,
     CustomizationComponent,
     SrhTourComponent,
-    SrhTourGameComponent
+    SrhTourGameComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
