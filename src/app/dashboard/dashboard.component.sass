@@ -9,6 +9,7 @@
   position: absolute
   right: 3%
   top: 3%
+  z-index: 1000
 
 .home > img
   width: 2.5vw
@@ -26,6 +27,7 @@ ul
 
 .dashboard
   @include grid-column(8)
+  @include grid-shift(3)
   padding: 2%
 
   .module-box
