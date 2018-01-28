@@ -46,7 +46,6 @@
 
 .daily
   width: 3.5vw
-  margin-bottom: .5vh
 
 ul
   list-style: none
@@ -55,6 +54,12 @@ ul
 .tagesplanbox > ul > li
   padding-bottom: 3vh
   font-size: 15px
+
+.tagesplanbox > .tagesplan, .daily
+  display: inline-block
+
+.tagesplan
+  margin-left: 4%
 
 .time
   /*background-color: mediumseagreen
@@ -66,7 +71,7 @@ ul
 .checkmark
   opacity: 0
 
-input[type=checkbox]:checked + label.strikethrough
+[type=checkbox]:checked + span
   text-decoration: line-through
   color: #a8a8a8
 
