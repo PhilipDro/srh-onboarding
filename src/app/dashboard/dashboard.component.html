@@ -21,10 +21,10 @@
           <div (click)="toggleSrhTour()" class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
             <img src="{{module.thumbnail}}" />
             <h3>{{module.name}}</h3>
-            <p *ngIf="blurElement == i" class="description-text">
-              {{module.description}}
-            </p>
           </div>
+          <p *ngIf="blurElement == i" class="description-text">
+            {{module.description}}
+          </p>
         </li>
       </ul>
 
