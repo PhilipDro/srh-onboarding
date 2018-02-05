@@ -34,6 +34,8 @@ export class DashboardComponent implements OnInit {
   }
 
   onWelcomeGo(clicked: boolean) {
+    this.blurElement = -2;
+    this.backdrop = true;
     // add event listener to main.container to go through tutorial when wecome "Go" is clicked
     this.containerListener = this.tapAnywhere.bind(this)
     this.elementRef.nativeElement.querySelector('main.container')

@@ -1,12 +1,12 @@
 <main class="container" [ngClass]="{'overlay': backdrop}">
-  <div class="test"></div>
   <!-- welcome screen in the beginning -->
   <app-welcome-screen (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
   <!-- side bar -->
   <app-sidebar [blurElement]="blurElement"></app-sidebar>
 
-  <span class="home"(click)="srhTourActive = false"><img src="../assets/icons/home-black-building-symbol.svg" alt="home-button"/></span>
+  <span class="home" (click)="srhTourActive = false"><img src="../assets/icons/home-black-building-symbol.svg" alt="home-button"/></span>
+
 
   <!-- srh hospital overview -->
   <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
@@ -14,6 +14,8 @@
   <!-- module display -->
   <section *ngIf="!srhTourActive" class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
+    <span class="repeat-tour" (click)="onWelcomeGo()">Tour wiederholen</span>
+
     <article class="container">
       <!-- Test mock modules -->
       <ul>
@@ -22,7 +24,7 @@
             <img src="{{module.thumbnail}}" />
             <h3>{{module.name}}</h3>
           </div>
-          <p *ngIf="blurElement == i" class="description-text">
+          <p *ngIf="blurElement == i" class="description-text description-{{i}}">
             {{module.description}}
           </p>
         </li>
