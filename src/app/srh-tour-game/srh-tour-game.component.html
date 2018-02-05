@@ -1,18 +1,60 @@
 <section class="srh-tour-game">
   <h1>Die SRH Tour</h1>
+  <article *ngIf="stage == 1" class="level">
 
-  <h2 class="special-font-2">Bücherei</h2>
-  <p>Die Bücherei befindet sich am Ende des Ganges kurz vor der Außenterasse.<br />
-  Welche Farbe haben die Bücherregale auf der Fensterseite?</p>
-  <ul>
-    <li>Grün</li>
-    <li>Blau</li>
-    <li>Rot</li>
-    <li>Grau</li>
-  </ul>
+    <h2 class="special-font-1">Bücherei</h2>
+    <span>{{stage}}/3 Punkte</span>
+    <p>Die Bücherei befindet sich am Ende des Ganges kurz vor der Außenterasse.<br />
+    Welche Farbe haben die Bücherregale auf der Fensterseite?</p>
+    <ul>
+      <li (click)="next('wrong')">Grün</li>
+      <li (click)="next('wrong')">Blau</li>
+      <li (click)="next('right', $event)">Rot</li>
+      <li (click)="next('wrong')">Grau</li>
+    </ul>
 
-  <button (click)="srhTourStarted = false" type="button" class="btn-secondary">Zurück</button>
+    <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
+  </article>
 
-  <button type="button" class="btn-secondary btn-right">Überspringen</button>
+  <article *ngIf="stage == 2" class="level">
+
+    <h2 class="special-font-1">Haus am Wald</h2>
+    <span>{{points}}/3 Punkte</span>
+    <p>Wie viele Station umfasst das Haus am Wald, in dem Sie sich befinden?</p>
+    <ul>
+      <li (click)="next('wrong')">Drei</li>
+      <li (click)="next('right')">Sechs</li>
+      <li (click)="next('wrong')">Acht</li>
+      <li (click)="next('wrong')">Zehn</li>
+    </ul>
+
+    <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
+  </article>
+
+  <article *ngIf="stage == 3" class="level">
+
+    <h2 class="special-font-1">Bücherei</h2>
+    <span>{{points}}/3 Punkte</span>
+    <p>Die Bücherei befindet sich am Ende des Ganges kurz vor der Außenterasse.<br />
+    Welche Farbe haben die Bücherregale auf der Fensterseite?</p>
+    <ul>
+      <li>Grün</li>
+      <li>Blau</li>
+      <li>Rot</li>
+      <li>Grau</li>
+    </ul>
+
+    <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
+  </article>
+
+  <article *ngIf="stage == 4" class="level">
+
+    <h2 class="special-font-2">Herzlichen Glückwunsch</h2>
+    <span>{{points}}/3 Punkte</span>
+    <p>Sie haben ein Freigetränk in der Cafeteria gewonnen.</p>
+
+    <!-- FIXME:  -->
+    <button (click)="!srhTourStarted" type="button" class="btn-secondary btn-right">Beenden</button>
+  </article>
 
 </section>
