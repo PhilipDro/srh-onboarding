@@ -18,10 +18,11 @@ export class SrhTourGameComponent implements OnInit {
     if(indicator == 'right') {
       event.target.className += "success";
       this.points ++;
-      setTimeout(()=>this.incrStage(),2000);
+      setTimeout(()=>this.incrStage(),1500);
     }
-    else {
-      this.incrStage();
+    else { // if wrong
+      event.target.className += "wrong";
+      setTimeout(()=>this.incrStage(),1500);
     }
   }
 

@@ -2,15 +2,15 @@
   <h1>Die SRH Tour</h1>
   <article *ngIf="stage == 1" class="level">
 
-    <h2 class="special-font-1">Bücherei</h2>
+    <h2 class="special-font-1">Verkehrsanbindung</h2>
     <span>{{stage}}/3 Punkte</span>
-    <p>Die Bücherei befindet sich am Ende des Ganges kurz vor der Außenterasse.<br />
-    Welche Farbe haben die Bücherregale auf der Fensterseite?</p>
+    <p>Der bequemste Weg zur An- und Abreise wird durch die Nutzung des öffentlichen  Nahverkehrs gewährleistet.</p>
+    <strong>Welche sind die dafür geeigneten Busverbindungen?</strong>
     <ul>
-      <li (click)="next('wrong')">Grün</li>
-      <li (click)="next('wrong')">Blau</li>
-      <li (click)="next('right', $event)">Rot</li>
-      <li (click)="next('wrong')">Grau</li>
+      <li (click)="next('wrong', $event)">Linie 8</li>
+      <li (click)="next('wrong', $event)">Linie 12 und 14</li>
+      <li (click)="next('right', $event)">Linie 10 und 17</li>
+      <li (click)="next('wrong', $event)">Linie 19</li>
     </ul>
 
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
@@ -22,10 +22,10 @@
     <span>{{points}}/3 Punkte</span>
     <p>Wie viele Station umfasst das Haus am Wald, in dem Sie sich befinden?</p>
     <ul>
-      <li (click)="next('wrong')">Drei</li>
-      <li (click)="next('right')">Sechs</li>
-      <li (click)="next('wrong')">Acht</li>
-      <li (click)="next('wrong')">Zehn</li>
+      <li (click)="next('wrong', $event)">Drei</li>
+      <li (click)="next('right', $event)">Sechs</li>
+      <li (click)="next('wrong', $event)">Acht</li>
+      <li (click)="next('wrong', $event)">Zehn</li>
     </ul>
 
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
@@ -33,21 +33,37 @@
 
   <article *ngIf="stage == 3" class="level">
 
-    <h2 class="special-font-1">Bücherei</h2>
+    <h2 class="special-font-1">Patientenaufenthaltsraum</h2>
     <span>{{points}}/3 Punkte</span>
-    <p>Die Bücherei befindet sich am Ende des Ganges kurz vor der Außenterasse.<br />
-    Welche Farbe haben die Bücherregale auf der Fensterseite?</p>
+    <p>Auf jeder Ebene der Bettenhäuser laden Patientenaufenthaltsräume mit großzügigen Terrassen zum Verweilen ein.</p>
+    <strong>Wie viele Säulen stehen im Patientenaufenthaltsraum?</strong>
     <ul>
-      <li>Grün</li>
-      <li>Blau</li>
-      <li>Rot</li>
-      <li>Grau</li>
+      <li (click)="next('right', $event)">Eine</li>
+      <li (click)="next('wrong', $event)">Zwei</li>
+      <li (click)="next('wrong', $event)">Drei</li>
+      <li (click)="next('wrong', $event)">Vier</li>
     </ul>
 
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
   </article>
 
   <article *ngIf="stage == 4" class="level">
+
+    <h2 class="special-font-1">Patientencafé</h2>
+    <span>{{points}}/3 Punkte</span>
+    <p>In der Cafeteria in unserem Hauptgebäude erwartet Sie ein vielseitiges Angebot an Speisen und Getränken in angenehmer Atmosphäre. Dort stehen ein täglich wechselndes Mittags-Menü, Kaffee, Kuchen und kleine Snacks zur Auswahl.</p>
+    <strong>Wie sind die Öffnungszeiten des Patientencafés?</strong>
+    <ul>
+      <li (click)="next('wrong', $event)">9.30 bis 19 Uhr</li>
+      <li (click)="next('right', $event)">8.30 bis 20 Uhr</li>
+      <li (click)="next('wrong', $event)">8 bis 19 Uhr</li>
+      <li (click)="next('wrong', $event)">10.30 bis 21 Uhr</li>
+    </ul>
+
+    <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
+  </article>
+
+  <article *ngIf="stage == 5" class="level">
 
     <h2 class="special-font-2">Herzlichen Glückwunsch</h2>
     <span>{{points}}/3 Punkte</span>
