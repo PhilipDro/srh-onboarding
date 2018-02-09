@@ -1,12 +1,12 @@
 <section class="srh-tour-game">
-  <h1>Die SRH Tour</h1>
+  <h1>Das SRH Quiz</h1>
   <article *ngIf="stage == 1" class="level">
 
     <h2 class="special-font-1">Verkehrsanbindung</h2>
-    <span>{{stage}}/3 Punkte</span>
+    <span class="punkte">{{stage}}/3 Punkte</span>
     <p>Der bequemste Weg zur An- und Abreise wird durch die Nutzung des öffentlichen  Nahverkehrs gewährleistet.</p>
     <strong>Welche sind die dafür geeigneten Busverbindungen?</strong>
-    <ul>
+    <ul class="quizbox">
       <li (click)="next('wrong', $event)">Linie 8</li>
       <li (click)="next('wrong', $event)">Linie 12 und 14</li>
       <li (click)="next('right', $event)">Linie 10 und 17</li>
@@ -19,9 +19,10 @@
   <article *ngIf="stage == 2" class="level">
 
     <h2 class="special-font-1">Haus am Wald</h2>
-    <span>{{points}}/3 Punkte</span>
-    <p>Wie viele Station umfasst das Haus am Wald, in dem Sie sich befinden?</p>
-    <ul>
+    <span class="punkte">{{points}}/3 Punkte</span>
+    <p>Ein schöner Text der hier einfach so liegt</p>
+    <strong>Wie viele Station umfasst das Haus am Wald, in dem Sie sich befinden?</strong>
+    <ul class="quizbox">
       <li (click)="next('wrong', $event)">Drei</li>
       <li (click)="next('right', $event)">Sechs</li>
       <li (click)="next('wrong', $event)">Acht</li>
@@ -34,10 +35,10 @@
   <article *ngIf="stage == 3" class="level">
 
     <h2 class="special-font-1">Patientenaufenthaltsraum</h2>
-    <span>{{points}}/3 Punkte</span>
+    <span class="punkte">{{points}}/3 Punkte</span>
     <p>Auf jeder Ebene der Bettenhäuser laden Patientenaufenthaltsräume mit großzügigen Terrassen zum Verweilen ein.</p>
     <strong>Wie viele Säulen stehen im Patientenaufenthaltsraum?</strong>
-    <ul>
+    <ul class="quizbox">
       <li (click)="next('right', $event)">Eine</li>
       <li (click)="next('wrong', $event)">Zwei</li>
       <li (click)="next('wrong', $event)">Drei</li>
@@ -50,10 +51,10 @@
   <article *ngIf="stage == 4" class="level">
 
     <h2 class="special-font-1">Patientencafé</h2>
-    <span>{{points}}/3 Punkte</span>
+    <span class="punkte">{{points}}/3 Punkte</span>
     <p>In der Cafeteria in unserem Hauptgebäude erwartet Sie ein vielseitiges Angebot an Speisen und Getränken in angenehmer Atmosphäre. Dort stehen ein täglich wechselndes Mittags-Menü, Kaffee, Kuchen und kleine Snacks zur Auswahl.</p>
     <strong>Wie sind die Öffnungszeiten des Patientencafés?</strong>
-    <ul>
+    <ul class="quizbox">
       <li (click)="next('wrong', $event)">9.30 bis 19 Uhr</li>
       <li (click)="next('right', $event)">8.30 bis 20 Uhr</li>
       <li (click)="next('wrong', $event)">8 bis 19 Uhr</li>
