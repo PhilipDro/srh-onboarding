@@ -20,7 +20,7 @@
       <ul>
         <li *ngFor="let module of modules; let i = index">
           <div (click)="toggleSrhTour()" class="module-box" [ngClass]="{'active-box': blurElement==i || blurElement == -3}">
-            <img src="{{module.thumbnail}}" />
+            <img src="{{modulePath}}{{module.image}}" />
             <h3>{{module.name}}</h3>
           </div>
           <p *ngIf="blurElement == i" class="description-text description-{{i}}">

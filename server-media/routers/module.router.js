@@ -19,8 +19,7 @@ moduleRouter.get('/about', function(req, res) {
 });
 
 moduleRouter.get('/find', function (req, res) {
-    let id = req.query.id;
-    moduleService.getModuleById(id,
+    moduleService.getModuleById(
         result => {
             if(_.isNil(result)){
                 res.status(404).end();

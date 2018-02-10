@@ -2,14 +2,12 @@ var connectionPool  = require('../tools/connection-pool');
 var _               = require('lodash');
 
 var moduleService = {
-  getModuleById : function(id, success, failure){
+  getModuleById : function(success, failure){
     connectionPool.query(
-      `SELECT name, description, image
-          FROM modules`,
-      [id],
+      "SELECT moduleId, name, description, image FROM modules",
       function (error, results, fields) {
           if (_.isNil(error) && _.isFunction(success)) {
-              success(results[0]);
+              success(results);
           } else if(_.isFunction(failure)){
               failure(error);
           }

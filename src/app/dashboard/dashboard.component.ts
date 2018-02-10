@@ -1,8 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { ModulesService } from '../services/modules.service';
-import { Module } from '../module';
 
 import { UserService } from "../services/user.service";
+import { ModuleService } from '../services/module.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,18 +9,27 @@ import { UserService } from "../services/user.service";
   styleUrls: ['./dashboard.component.sass']
 })
 export class DashboardComponent implements OnInit {
-  modules: Module[];
-
   // tells wether srh tour was clicked or not
   srhTourActive = false;
   // tells wether or not the background is blacked out
   backdrop = true;
   //auto increments with every tap anywhere to activate/highlight certain module
   blurElement = -2;
+
   //id that initialized the user
   id = 6;
   patientName: string;
 
+  // dashboard module properties
+  moduleId = 3;
+  moduleName: string;
+  moduleDescription: string;
+  moduleImage: string;
+  modulePath = '../assets/images/';
+
+  modules: any[];
+
+  private moduleService: ModuleService;
   private userService: UserService;
 
   // new function reference is created after bind() --> need to save to variable
@@ -29,10 +37,11 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private elementRef:ElementRef,
-    private modulesService: ModulesService,
-    userService: UserService
+    userService: UserService,
+    moduleService: ModuleService
   ) {
     this.userService = userService;
+    this.moduleService = moduleService;
   }
 
   ngOnInit() {
@@ -42,16 +51,24 @@ export class DashboardComponent implements OnInit {
 
   getPatientData() {
     this.userService.getUserById(this.id)
-    .then(result => this.resolveResult(result))
+    .then(result => this.resolvePatientResult(result))
           .catch(error => console.log(error));
   }
-  resolveResult(result) {
+  resolvePatientResult(result) {
     this.patientName = result.firstname + ' ' + result.lastname;
     console.log(this.patientName);
   }
 
-  getModules(): void {
-    this.modules = this.modulesService.getModules();
+  getModules() {
+    this.moduleService.getModuleById(this.moduleId)
+    .then(result => this.resolveModuleResult(result))
+          .catch(error => console.log(error));
+  }
+  resolveModuleResult(result) {
+    this.modules = result;
+    this.moduleName = this.modules[0].name;
+    this.moduleDescription = this.modules[0].description;
+    this.moduleImage = this.modules[0].image;
   }
 
   onWelcomeGo(clicked: boolean) {
