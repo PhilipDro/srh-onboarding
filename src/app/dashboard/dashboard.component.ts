@@ -2,6 +2,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ModulesService } from '../modules.service';
 import { Module } from '../module';
 
+import { UserService } from "../user.service";
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,6 +18,11 @@ export class DashboardComponent implements OnInit {
   backdrop = true;
   //auto increments with every tap anywhere to activate/highlight certain module
   blurElement = -2;
+  //id that initialized the user
+  id = 6;
+  patientName: string;
+
+  private userService: UserService;
 
   // new function reference is created after bind() --> need to save to variable
   containerListener;
@@ -23,10 +30,24 @@ export class DashboardComponent implements OnInit {
   constructor(
     private elementRef:ElementRef,
     private modulesService: ModulesService,
-  ) { }
+    userService: UserService
+  ) {
+    this.userService = userService;
+  }
 
   ngOnInit() {
     this.getModules();
+    this.getPatientData();
+  }
+
+  getPatientData() {
+    this.userService.getUserById(this.id)
+    .then(result => this.resolveResult(result))
+          .catch(error => console.log(error));
+  }
+  resolveResult(result) {
+    this.patientName = result.firstname + ' ' + result.lastname;
+    console.log(this.patientName);
   }
 
   getModules(): void {

@@ -1,9 +1,9 @@
 <main class="container" [ngClass]="{'overlay': backdrop}">
   <!-- welcome screen in the beginning -->
-  <app-welcome-screen (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
+  <app-welcome-screen [patientName]="patientName" (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
   <!-- side bar -->
-  <app-sidebar [blurElement]="blurElement"></app-sidebar>
+  <app-sidebar [patientName]="patientName" [blurElement]="blurElement"></app-sidebar>
 
   <span class="home" (click)="srhTourActive = false"><img src="../assets/icons/home-black-building-symbol.svg" alt="home-button"/></span>
 

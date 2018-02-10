@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-screen',
@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./welcome-screen.component.sass']
 })
 export class WelcomeScreenComponent implements OnInit {
+  @Input() patientName: string;
 
   @Output() onClickGo = new EventEmitter<boolean>();
   clickedGo = false;

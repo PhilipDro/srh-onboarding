@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,6 +10,7 @@ import { CustomizationComponent } from './customization/customization.component'
 import { SrhTourComponent } from './srh-tour/srh-tour.component';
 
 import { ModulesService } from './modules.service';
+import { UserService } from './user.service';
 import { SrhTourGameComponent } from './srh-tour-game/srh-tour-game.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
@@ -26,10 +27,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
-    ModulesService
+    ModulesService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,7 +1,7 @@
 <section class="sidebar" [ngClass]="{'active-sidebar': blurElement==-1 || blurElement == -3}">
   <img class="logo" src="../assets/images/SRH_weiß.png" (click)="srhTourActive = !srhTourActive"/>
 
-  <h3 class="begruessung">Hallo, <br> Mareike Hedwig</h3>
+  <h3 class="begruessung">Hallo, <br> {{patientName}}</h3>
 
   <article class="tagesplanbox">
     <img class="daily" src="../assets/icons/calendar-white.svg" alt="daily"/><p class="tagesplan">Tagesplan</p>

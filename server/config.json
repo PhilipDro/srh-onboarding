@@ -1,0 +1,9 @@
+{
+  "mysql" : {
+    "connectionLimit" : 10,
+    "host":"localhost",
+    "database":"waldklinikum",
+    "user":"waldklinikum",
+    "password":"waldklinikum"
+  }
+}
