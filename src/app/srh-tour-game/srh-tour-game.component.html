@@ -66,9 +66,11 @@
 
   <article *ngIf="stage == 5" class="level">
     <img class="winner" src="../assets/icons/medal.svg"/>
-    <h2 class="special-font-2">Herzlichen Glückwunsch</h2>
+    <h2 class="special-font-2">Herzlichen Glückwunsch!</h2>
     <span class="winnerpoints">{{points}}/3 Punkte</span>
-    <p class="winnertext">Sie haben ein Freigetränk in der Cafeteria gewonnen.</p>
+    <p class="winnertext">Sie haben ein Freigetränk in der Cafeteria gewonnen!</p>
+    <img class="medalsmall" src="../assets/icons/medalsmall.svg"/>
+    <img class="trophysmall" src="../assets/icons/trophy.svg"/>
 
     <!-- FIXME:  -->
     <button (click)="!srhTourStarted" type="button" class="btn-secondary btn-right">Beenden</button>
