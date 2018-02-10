@@ -1,8 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { ModulesService } from '../modules.service';
+import { ModulesService } from '../services/modules.service';
 import { Module } from '../module';
 
-import { UserService } from "../user.service";
+import { UserService } from "../services/user.service";
 
 @Component({
   selector: 'app-dashboard',
