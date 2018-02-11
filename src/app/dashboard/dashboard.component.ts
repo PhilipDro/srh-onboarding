@@ -9,17 +9,35 @@ import { ModuleService } from '../services/module.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.sass'],
   animations: [
-    trigger('blurState', [
-      state('inactive', style({
-      })),
-      state('active',   style({
-        // -webkit-filter: 'blur(15px)',
-        filter: 'blur(1px)'
-      })),
-      transition('inactive => active', animate('400ms ease-in')),
-      transition('active => inactive', animate('400ms ease-out'))
+    trigger('fadeInOut', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({opacity:0}),
+        animate(900, style({opacity:1}))
+      ]),
+      transition(':leave', [   // :leave is alias to '* => void'
+        animate(200, style({
+          opacity:0,
+          position: 'absolute',
+          top: '30%'
+        }))
+      ])
+    ]),
+    trigger('rollInOut', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({opacity:0}),
+        animate(300, style({opacity:1}))
+      ]),
+      transition(':leave', [   // :leave is alias to '* => void'
+        animate(300, style({
+          opacity:0,
+          // position: 'absolute',
+          // top: '30%'
+        }))
+      ])
     ])
   ]
+
+
 })
 export class DashboardComponent implements OnInit {
   // tells wether srh tour was clicked or not
@@ -41,9 +59,6 @@ export class DashboardComponent implements OnInit {
   modulePath = '../assets/images/';
 
   modules: any[];
-
-  // animations
-  blur = 'inactive';
 
   private moduleService: ModuleService;
   private userService: UserService;
@@ -72,7 +87,6 @@ export class DashboardComponent implements OnInit {
   }
   resolvePatientResult(result) {
     this.patientName = result.firstname + ' ' + result.lastname;
-    console.log(this.patientName);
   }
 
   getModules() {
@@ -88,9 +102,6 @@ export class DashboardComponent implements OnInit {
   }
 
   onWelcomeGo(clicked: boolean) {
-    //animations
-    this.blur = 'active';
-
     this.blurElement = -2;
     this.backdrop = true;
     // add event listener to main.container to go through tutorial when wecome "Go" is clicked

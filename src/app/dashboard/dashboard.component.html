@@ -3,15 +3,15 @@
   <app-welcome-screen [patientName]="patientName" (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
 
   <!-- side bar -->
-  <app-sidebar [@blurState]="blur" [patientName]="patientName" [blurElement]="blurElement"></app-sidebar>
+  <app-sidebar [patientName]="patientName" [blurElement]="blurElement"></app-sidebar>
 
   <span class="home" (click)="srhTourActive = false"><img src="../assets/icons/home-black-building-symbol.svg" alt="home-button"/></span>
 
   <!-- srh hospital overview -->
-  <app-srh-tour *ngIf="srhTourActive"></app-srh-tour>
+  <app-srh-tour *ngIf="srhTourActive" [@rollInOut]></app-srh-tour>
 
   <!-- module display -->
-  <section *ngIf="!srhTourActive" class="dashboard">
+  <section *ngIf="!srhTourActive" [@rollInOut] class="dashboard">
     <h1 [ngClass]="{'blur': backdrop}">Ihre Module</h1>
     <span class="repeat-tour" (click)="onWelcomeGo()">Tour wiederholen</span>
 
@@ -23,14 +23,14 @@
             <img src="{{modulePath}}{{module.image}}" />
             <h3>{{module.name}}</h3>
           </div>
-          <p *ngIf="blurElement == i" class="description-text description-{{i}}">
+          <p *ngIf="blurElement == i" [@fadeInOut] class="description-text description-{{i}}">
             {{module.description}}
           </p>
         </li>
       </ul>
 
       <!-- description text for sidebar ! -->
-      <p *ngIf="blurElement == -1" class="description-text">
+      <p *ngIf="blurElement == -1" [@fadeInOut] class="description-text">
         Hier befindet sich Ihre Tagesübersicht. Damit haben Sie alles im Blick, was für heute ansteht.
       </p>
 

@@ -1,6 +1,6 @@
 <section class="srh-tour-game">
   <h1>Das SRH Quiz</h1>
-  <article *ngIf="stage == 1" class="level">
+  <article *ngIf="stage == 1" [@rollInOut] class="level">
 
     <h2 class="special-font-1">Verkehrsanbindung</h2>
     <span class="punkte">{{stage}}/3 Punkte</span>
@@ -16,7 +16,7 @@
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
   </article>
 
-  <article *ngIf="stage == 2" class="level">
+  <article *ngIf="stage == 2" [@rollInOut] class="level">
 
     <h2 class="special-font-1">Haus am Wald</h2>
     <span class="punkte">{{points}}/3 Punkte</span>
@@ -32,7 +32,7 @@
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
   </article>
 
-  <article *ngIf="stage == 3" class="level">
+  <article *ngIf="stage == 3" [@rollInOut] class="level">
 
     <h2 class="special-font-1">Patientenaufenthaltsraum</h2>
     <span class="punkte">{{points}}/3 Punkte</span>
@@ -48,7 +48,7 @@
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
   </article>
 
-  <article *ngIf="stage == 4" class="level">
+  <article *ngIf="stage == 4" [@rollInOut] class="level">
 
     <h2 class="special-font-1">Patientencafé</h2>
     <span class="punkte">{{points}}/3 Punkte</span>
@@ -64,7 +64,7 @@
     <button (click)="incrStage()" type="button" class="btn-secondary btn-right">Überspringen</button>
   </article>
 
-  <article *ngIf="stage == 5" class="level">
+  <article *ngIf="stage == 5" [@rollInOut] class="level">
     <img class="winner" src="../assets/icons/medal.svg"/>
     <h2 class="special-font-2">Herzlichen Glückwunsch!</h2>
     <span class="winnerpoints">{{points}}/3 Punkte</span>
