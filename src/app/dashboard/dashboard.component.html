@@ -34,6 +34,9 @@
         Hier befindet sich Ihre Tagesübersicht. Damit haben Sie alles im Blick, was für heute ansteht.
       </p>
 
+
     </article>
   </section>
+  <!-- tap anywhere button -->
+  <button *ngIf="blurElement > -2" [@fadeInOut] class="pulse" type="button">Weiter durch Tippen</button>
 </main>
