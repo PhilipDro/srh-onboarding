@@ -14,7 +14,7 @@
         <h3>Dr. Stefan Metzstein</h3>
         <p class="sub-h3">Kardiologie und Neurologie</p>
       </div>
-      <button class="btn-primary doktorbutton">Erfahre mehr</button>
+      <button class="btn-primary doktorbutton" (click)="openInfoBar()">Erfahre mehr</button>
     </article>
   </div>
   <div class="srh-segment-full">
@@ -23,7 +23,7 @@
       <img class="trophy" src="../assets/icons/trophy.svg" alt="Trophäe"/>
       <p class="tourtext">
         Werden Sie daher selbst aktiv und lernen unser Waldklinikum hautnah kennen.
-        Zum Abschluss gibt es ein gratis Getränk aus von der Cafeteria!
+        Zum Abschluss gibt es ein gratis Getränk aus der Cafeteria!
       </p>
       <button class="btn-primary right" (click)="srhTourStarted = true">Rundgang starten</button>
     </article>
@@ -33,7 +33,7 @@
     <h2>Essen</h2>
     <article class="srh-box food leftbox">
       <img class="chef " src="../assets/icons/chef.svg" alt="Chef"/>
-      <button class="btn-primary nahrungbutton">Erfahre mehr</button>
+      <button class="btn-primary nahrungbutton" (click)="openInfoBar()">Erfahre mehr</button>
     </article>
   </div>
   <div class="srh-segment-small">
@@ -62,9 +62,11 @@
     <h2>Kultur</h2>
     <article class="srh-box culture rightbox">
       <img class="chef " src="../assets/icons/theater.svg" alt="Masks"/>
-      <button class="btn-primary nahrungbutton">Erfahre mehr</button>
+      <button class="btn-primary nahrungbutton" (click)="openInfoBar()">Erfahre mehr</button>
     </article>
   </div>
 </section>
+
+<app-infobar [infoBar]="infoBar"></app-infobar>
 
 <app-srh-tour-game *ngIf="srhTourStarted" [@rollInOut]></app-srh-tour-game>

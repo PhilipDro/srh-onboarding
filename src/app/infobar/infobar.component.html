@@ -1,0 +1,20 @@
+<div *ngIf="infoBar" class="backdrop" (click)="closeInfoBar()">
+</div>
+<article *ngIf="infoBar" [@rollInOut]>
+  <h2>Kunst und Kultur in Klinikum</h2>
+  <p>
+    Als Kulturkrankenhaus integrieren wir Kunst und Kultur in unsere Architektur, aber auch in den Klinikalltag. Lassen Sie sich von unserer SRH Kulturzeit und den regelmäßigen Ausstellungen inspirieren.
+  </p>
+  <h3>Veranstaltungen</h3>
+  <strong>SRH Kulturzeit</strong>
+  <p>01.01.2018 - 31.12.2018 17:30 Uhr</p>
+
+  <p>
+    Quasi im Vorübergehen sollen Patienten, Besucher und Mitarbeiter die Möglichkeit erhalten, etwas Abstand zum medizinischen Alltag zu gewinnen. Deutschlands erstes Kulturkrankenhaus bietet täglich um 15:30 Uhr im Foyer Solisten und Bands, Dichtern und Denkern, Artisten und Kabarettisten, kleinen und großen Künstlern mit der SRH Kulturzeit eine Bühne.
+  </p>
+  <p>
+    Sie möchten selbst einmal eine Kultzurzeit bestreiten?
+    wir freuen uns auf Sie. Bitte melden Sie sich unter Tel.: 0365 828 8106 oder 8108 bei unserer Abteilung Marketing/PR.
+  </p>
+  <button type="button" (click)="closeInfoBar()">Zurück</button>
+</article>

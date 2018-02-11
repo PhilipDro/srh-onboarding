@@ -1,10 +1,10 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
-  selector: 'app-srh-tour',
-  templateUrl: './srh-tour.component.html',
-  styleUrls: ['./srh-tour.component.sass'],
+  selector: 'app-infobar',
+  templateUrl: './infobar.component.html',
+  styleUrls: ['./infobar.component.sass'],
   animations: [
     trigger('rollInOut', [
       transition(':enter', [   // :enter is alias to 'void => *'
@@ -21,18 +21,15 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ])
   ]
 })
-export class SrhTourComponent implements OnInit {
-  srhTourStarted = false;
-  infoBar = false;
-  articleListener;
-
-  constructor(private elementRef:ElementRef) { }
+export class InfobarComponent implements OnInit {
+  @Input() infoBar: boolean;
+  constructor() { }
 
   ngOnInit() {
   }
 
-  openInfoBar() {
-    this.infoBar = true;
+  closeInfoBar() {
+    this.infoBar = false;
   }
 
 }

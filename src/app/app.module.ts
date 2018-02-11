@@ -14,6 +14,7 @@ import { ModuleService } from './services/module.service';
 import { UserService } from './services/user.service';
 import { SrhTourGameComponent } from './srh-tour-game/srh-tour-game.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { InfobarComponent } from './infobar/infobar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CustomizationComponent,
     SrhTourComponent,
     SrhTourGameComponent,
-    SidebarComponent
+    SidebarComponent,
+    InfobarComponent
   ],
   imports: [
     BrowserModule,
