@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { UserService } from "../services/user.service";
 import { ModuleService } from '../services/module.service';
@@ -6,14 +7,26 @@ import { ModuleService } from '../services/module.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.sass']
+  styleUrls: ['./dashboard.component.sass'],
+  animations: [
+    trigger('blurState', [
+      state('inactive', style({
+      })),
+      state('active',   style({
+        // -webkit-filter: 'blur(15px)',
+        filter: 'blur(1px)'
+      })),
+      transition('inactive => active', animate('400ms ease-in')),
+      transition('active => inactive', animate('400ms ease-out'))
+    ])
+  ]
 })
 export class DashboardComponent implements OnInit {
   // tells wether srh tour was clicked or not
   srhTourActive = false;
   // tells wether or not the background is blacked out
   backdrop = true;
-  //auto increments with every tap anywhere to activate/highlight certain module
+  //auto increments with every tap anywhere to activate/highlight certain module /remove blur
   blurElement = -2;
 
   //id that initialized the user
@@ -28,6 +41,9 @@ export class DashboardComponent implements OnInit {
   modulePath = '../assets/images/';
 
   modules: any[];
+
+  // animations
+  blur = 'inactive';
 
   private moduleService: ModuleService;
   private userService: UserService;
@@ -72,6 +88,9 @@ export class DashboardComponent implements OnInit {
   }
 
   onWelcomeGo(clicked: boolean) {
+    //animations
+    this.blur = 'active';
+
     this.blurElement = -2;
     this.backdrop = true;
     // add event listener to main.container to go through tutorial when wecome "Go" is clicked

@@ -1,8 +1,8 @@
-<article *ngIf="!clickedSkip && !clickedGo">
-  <h1>Hallo {{patientName}}!</h1>
-  <p class="intro-text">Erfahren Sie in nur <strong>2 Minuten</strong> spielerisch alles, was Sie während Ihres Aufenthaltes im SRH Waldklinikum wissen möchten.</p>
+<article *ngIf="!clickedSkip && !clickedGo" [@fadeInOut]>
+  <h1 (click)="clickGo(true)">Hallo {{patientName}}!</h1>
+  <p (click)="clickGo(true)" class="intro-text">Erfahren Sie in nur <strong>2 Minuten</strong> spielerisch alles, was Sie während Ihres Aufenthaltes im SRH Waldklinikum wissen möchten.</p>
 
-  <section class="info">
+  <section (click)="clickGo(true)" class="info">
     <div class="column">
       <p><strong>268</strong><br />Zimmer</p>
     </div>
