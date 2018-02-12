@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -20,6 +20,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 export class SrhTourGameComponent implements OnInit {
   stage = 1;
   points = 0;
+  @Input() srhTourStarted: boolean;
 
   constructor() { }
 
@@ -36,6 +37,10 @@ export class SrhTourGameComponent implements OnInit {
       event.target.className += " wrong";
       setTimeout(()=>this.incrStage(),1500);
     }
+  }
+
+  endTour() {
+    this.srhTourStarted = false;
   }
 
   incrStage() {
