@@ -20,8 +20,8 @@
 
     <h2 class="special-font-1">Haus am Wald</h2>
     <span class="punkte">{{points}}/3 Punkte</span>
-    <p>Ein schöner Text der hier einfach so liegt</p>
-    <strong>Wie viele Station umfasst das Haus am Wald, in dem Sie sich befinden?</strong>
+    <p>In der Abteilung Haus am Wald kommen Sie am Schnellsten über den Westeingang</p>
+    <strong>Wie viele Stationen umfasst das Haus am Wald, in dem Sie sich befinden?</strong>
     <ul class="quizbox">
       <li (click)="next('wrong', $event)">Drei</li>
       <li (click)="next('right', $event)">Sechs</li>
@@ -66,10 +66,10 @@
 
   <article *ngIf="stage == 5" [@rollInOut] class="level">
     <img class="winner" src="../assets/icons/medal.svg"/>
-    <h2 class="special-font-2">Herzlichen Glückwunsch!</h2>
+    <h2 class="special-font-2">HERZLICHEN GLÜCKWUNSCH!</h2>
     <span class="winnerpoints">{{points}}/3 Punkte</span>
     <p class="winnertext">Sie haben ein Freigetränk in der Cafeteria gewonnen!</p>
-    <img class="medalsmall" src="../assets/icons/medalsmall.svg"/>
+    <!--<img class="medalsmall" src="../assets/icons/medalsmall.svg"/>-->
     <!--<img class="trophysmall" src="../assets/icons/trophy.svg"/>-->
 
     <!-- FIXME:  -->

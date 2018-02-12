@@ -1,24 +1,24 @@
 <article *ngIf="!clickedSkip && !clickedGo" [@fadeInOut]>
-  <h1 (click)="clickGo(true)">Hallo {{patientName}}!</h1>
+  <h1 (click)="clickGo(true)">Herzlich Willkommen {{patientName}}!</h1>
   <p (click)="clickGo(true)" class="intro-text">Erfahren Sie in nur <strong>2 Minuten</strong> spielerisch alles, was Sie während Ihres Aufenthaltes im SRH Waldklinikum wissen möchten.</p>
 
   <section (click)="clickGo(true)" class="info">
     <div class="column">
-      <p><strong>268</strong><br />Zimmer</p>
+      <p><strong>1.700</strong><br />Mitarbeiter</p>
     </div>
     <div class="column">
-      <p><strong>98</strong><br />Ärzte</p>
+      <p><strong>24</strong><br />Kliniken</p>
     </div>
     <div class="column">
-      <p><strong>331</strong><br />Patienten</p>
+      <p><strong>550.000</strong><br />Patienten</p>
     </div>
     <div class="column">
-      <p><strong>13</strong><br />Abteilungen</p>
+      <p><strong>23</strong><br />Abteilungen</p>
     </div>
   </section>
 
   <section class="button-section">
     <button class="btn-secondary" (click)="clickSkip(true)">Überspringen</button>
-    <button class="btn-primary" (click)="clickGo(true)">Tour starten!</button>
+    <button class="btn-primary start" (click)="clickGo(true)">Tour starten!</button>
   </section>
 </article>
