@@ -66,17 +66,12 @@
 
   <article *ngIf="stage == 5" [@rollInOut] class="level">
     <img class="winner" src="../assets/icons/medal.svg"/>
-    <h2 class="special-font-2">Herzlichen Glückwunsch!</h2>
+    <h2 class="special-font-2">Herzlichen Glückwunsch</h2>
     <span class="winnerpoints">{{points}}/3 Punkte</span>
     <p class="winnertext">Sie haben ein Freigetränk in der Cafeteria gewonnen!</p>
-    <!-- <article class="social">
-      <p><span class="highlight">11</span> weitere Patienten auf Ihrer Station freuen sich über ein Gespräch.</p>
-      <ul>
-        <li>Rüdiger Harming <p>Kontaktieren</p></li>
-        <li>Lise Meitner <p>Kontaktieren</p></li>
-      </ul>
-      <button type="button">Andere Patienten dürfen mir Nachrichten schreiben.</button>
-    </article> -->
+    <!--<img class="medalsmall" src="../assets/icons/medalsmall.svg"/>-->
+    <!--<img class="trophysmall" src="../assets/icons/trophy.svg"/>-->
+
     <button (click)="endTour()" type="button" class="btn-secondary btn-right">Beenden</button>
   </article>
 
