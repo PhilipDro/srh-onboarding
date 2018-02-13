@@ -1,7 +1,6 @@
 <main class="container" [ngClass]="{'overlay': backdrop}">
   <!-- welcome screen in the beginning -->
   <app-welcome-screen [patientName]="patientName" (onClickSkip)="removeBackdrop($event)" (onClickGo)="onWelcomeGo($event)"></app-welcome-screen>
-
   <!-- side bar -->
   <app-sidebar [patientName]="patientName" [blurElement]="blurElement"></app-sidebar>
 
