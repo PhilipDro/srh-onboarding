@@ -6,4 +6,6 @@
 export const environment_media = {
   production: false,
   apiBaseUrl: 'http://localhost:2222'
+  // apiBaseUrl: 'http://10.10.235.230:2222'
+
 };
